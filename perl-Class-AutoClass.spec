@@ -16,7 +16,6 @@ Buildrequires:  perl-devel
 %endif
 Buildrequires:  perl(IO::Stringy)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This perl module brings the following advantages:
