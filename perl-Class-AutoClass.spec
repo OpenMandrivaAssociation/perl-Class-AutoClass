@@ -1,7 +1,7 @@
 %define module  Class-AutoClass
 %define name    perl-%{module}
 %define version 0.092
-%define release %mkrel 4
+%define release %mkrel 6
 
 Name:           %{name}
 Version:        %{version}
