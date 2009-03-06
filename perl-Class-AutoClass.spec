@@ -1,7 +1,7 @@
 %define module  Class-AutoClass
 %define name    perl-%{module}
-%define version 0.092
-%define release %mkrel 7
+%define version 1.01
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
@@ -30,7 +30,7 @@ This perl module brings the following advantages:
   inheritance
 
 %prep
-%setup -n %{module}-%{version}
+%setup -n AutoClass
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +51,3 @@ rm -rf %{buildroot}
 %doc Changes INSTALL
 %{perl_vendorlib}/Class
 %{_mandir}/*/*
-
