@@ -1,22 +1,23 @@
-%define module  Class-AutoClass
-%define name    perl-%{module}
-%define version 1.01
-%define release %mkrel 2
+%define upstream_name    Class-AutoClass
+%define upstream_version 1.50
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        Yet another OO helper
-License:        GPL or Artistic
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Yet another OO helper
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
 Buildrequires:  perl(IO::Stringy)
+
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This perl module brings the following advantages:
@@ -30,7 +31,7 @@ This perl module brings the following advantages:
   inheritance
 
 %prep
-%setup -n AutoClass
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,6 +49,6 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc Changes INSTALL
+%doc Changes
 %{perl_vendorlib}/Class
 %{_mandir}/*/*
