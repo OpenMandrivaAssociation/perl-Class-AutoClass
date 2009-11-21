@@ -1,5 +1,5 @@
 %define upstream_name    Class-AutoClass
-%define upstream_version 1.50
+%define upstream_version 1.51
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
