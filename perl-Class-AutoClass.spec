@@ -10,11 +10,8 @@ License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
-
-%if %{mdkversion} < 1010
-Buildrequires:  perl-devel
-%endif
 Buildrequires:  perl(IO::Stringy)
+BuildRequires:	perl(Module::Build)
 
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
