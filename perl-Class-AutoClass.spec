@@ -2,14 +2,14 @@
 %define upstream_version 1.54
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Version:    %perl_convert_version 1.55
+Release:    1
 
 Summary:    Yet another OO helper
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Class/Class-AutoClass-1.55.tar.gz
 Buildrequires:  perl(IO::Stringy)
 BuildRequires:	perl(Module::Build)
 
@@ -109,7 +109,7 @@ rm -rf %{buildroot}
 * Mon Aug 28 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.092-3mdv2007.0
 - Rebuild
 
-* Thu Sep 29 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.092-2mdk
+* Thu Sep 29 2005 Nicolas LÃ©cureuil <neoclust@mandriva.org> 0.092-2mdk
 - fix buildrequires
 
 * Mon Jun 20 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.092-1mdk
@@ -123,4 +123,5 @@ rm -rf %{buildroot}
 
 * Mon Jan 17 2005 Guillaume Rousse <guillomovitch@mandrake.org> 0.09-1mdk 
 - first mdk release
+
 
