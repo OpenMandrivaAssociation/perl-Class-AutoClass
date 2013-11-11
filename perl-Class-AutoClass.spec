@@ -1,19 +1,18 @@
 %define upstream_name    Class-AutoClass
-%define upstream_version 1.55
+%define upstream_version 1.56
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 1.55
+Version:    %perl_convert_version %{upstream_version}
 Release:    1
 
 Summary:    Yet another OO helper
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Class/Class-AutoClass-1.55.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Class/Class-AutoClass-%{upstream_version}.tar.gz
 Buildrequires:  perl(IO::Stringy)
 BuildRequires:	perl(Module::Build)
 
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This perl module brings the following advantages:
@@ -34,17 +33,14 @@ This perl module brings the following advantages:
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %check
 # %make test
 
 %clean 
-rm -rf %{buildroot}
 
 %files 
-%defattr(-,root,root)
 %doc Changes
 %{perl_vendorlib}/Class
 %{_mandir}/*/*
@@ -122,5 +118,6 @@ rm -rf %{buildroot}
 
 * Mon Jan 17 2005 Guillaume Rousse <guillomovitch@mandrake.org> 0.09-1mdk 
 - first mdk release
+
 
 
