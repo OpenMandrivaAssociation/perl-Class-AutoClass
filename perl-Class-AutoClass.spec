@@ -9,6 +9,7 @@ License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Class/Class-AutoClass-%{upstream_version}.tar.gz
+BuildRequires:	make
 Buildrequires:  perl(IO::Stringy)
 BuildRequires:	perl(Module::Build)
 
