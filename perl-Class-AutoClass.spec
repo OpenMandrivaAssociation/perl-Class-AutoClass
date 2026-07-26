@@ -1,14 +1,13 @@
 %define upstream_name    Class-AutoClass
-%define upstream_version 1.56
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    1.56
+Release:    4
 
 Summary:    Yet another OO helper
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Class/Class-AutoClass-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Class/Class-AutoClass-%{version}.tar.gz
 BuildRequires:	make
 Buildrequires:  perl(IO::Stringy)
 BuildRequires:	perl(Module::Build)
@@ -27,7 +26,7 @@ This perl module brings the following advantages:
   inheritance
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
